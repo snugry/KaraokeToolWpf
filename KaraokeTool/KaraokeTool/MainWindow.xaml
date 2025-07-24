@@ -1,0 +1,35 @@
+﻿<Window x:Class="KaraokeTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KaraokeTool"
+        mc:Ignorable="d"
+        Title="KaraokeTool" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="FolderBtn" Click="FolderBtn_Click">Open Video Folder</Button>
+
+        <Label Grid.Row="1">Songs:</Label>
+        <ListBox x:Name="SongBox" Grid.Row="2" Grid.ColumnSpan="2"></ListBox>
+        
+        <Label Grid.Row="1" Grid.Column="2">Singers (One per Line):</Label>
+        <TextBox x:Name="SingerBox" AcceptsReturn="True" TextWrapping="Wrap" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+
+        <Button x:Name="RandomSongBtn" Grid.Row="3" Click="RandomSongBtn_Click">Random Song!</Button>
+        <Button x:Name="RandomBtn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Click="RandomBtn_Click">MIX!</Button>
+        <Button x:Name="RandomSingerBtn" Grid.Row="3" Grid.Column="3" Click="RandomSingerBtn_Click">Random Singer!</Button>
+        
+    </Grid>
+</Window>
